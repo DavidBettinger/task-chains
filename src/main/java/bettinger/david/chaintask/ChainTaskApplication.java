@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ChaintaskApplication {
+public class ChainTaskApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ChaintaskApplication.class, args);
+        SpringApplication.run(ChainTaskApplication.class, args);
     }
 
 }

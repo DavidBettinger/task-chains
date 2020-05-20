@@ -1,16 +1,9 @@
 package bettinger.david.chaintask.model;
 
-import java.util.Date;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PrePersist;
-
-import org.springframework.format.annotation.DateTimeFormat;
-
 import lombok.Data;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -32,11 +25,10 @@ public class Task {
 
 	private Date createdAt;
 
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date deadline;
 
 	@PrePersist
-	void beforPersist() {
+	void beforePersist() {
 		if (this.completed == null) {
 			this.completed = false;
 		}

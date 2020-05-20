@@ -1,10 +1,10 @@
 package bettinger.david.chaintask.repository;
 
 import bettinger.david.chaintask.model.Task;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 
 
-public interface TaskRepository extends CrudRepository<Task, Long> {
+public interface TaskRepository extends JpaRepository<Task, Long> {
 
 }
