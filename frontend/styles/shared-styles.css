@@ -20,11 +20,11 @@ a[highlight] {
     display: flex;
 }
 
-.list-view .chain-task-grid {
+.list-view .task-chains-grid {
     flex: 2;
 }
 
-.list-view .chain-task-form {
+.list-view .base-form {
     flex: 1;
     padding: var(--lumo-space-m);
 }

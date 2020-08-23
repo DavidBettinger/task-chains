@@ -1,6 +1,6 @@
-package bettinger.david.chaintask.repository;
+package bettinger.david.taskchains.repository;
 
-import bettinger.david.chaintask.model.Task;
+import bettinger.david.taskchains.model.entity.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
