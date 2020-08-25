@@ -5,12 +5,11 @@ A Spring Boot web app to create and manage task-chains.
 ## Introduction
 
 The purpose of this app is to create and manage lists (chains) of tasks as well as create the accounts for 
-
 the users who use my [task-chain android app](https://github.com/DavidBettinger/task-chains-android-app). 
 
 My aim for this project is primarily to learn how to build good Java Spring Boot programs.
 
-### Examples of use
+### Example of use
 
 A task-chain could represent the things that need to be done in connection with the opening of a new branch. Such as:
 
@@ -35,7 +34,7 @@ There are many more features I plan to add to the app. At the moment the most im
 - Add the option to assign tasks to specific users or user groups
 - Add the possibility to monitor the completion of task
 - Rework the UI
-- Move from the in memory DB to a permanent DB
+- Move from the in-memory DB to a permanent DB
 - ...
 
 
@@ -53,5 +52,7 @@ There are many more features I plan to add to the app. At the moment the most im
 
 ### Other information
 
-I .
+For the past few months I have been doing Spring Framework, Spring Security and Spring Boot Microservice online courses.
+I use this project to deepen my Spring Boot knowledge and gain more programming experience. And at the same time I want to create a program that may be useful to me or other people in the future.
+
 
