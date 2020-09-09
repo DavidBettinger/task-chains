@@ -1,4 +1,4 @@
-package bettinger.david.taskchains.ui.views.list;
+package bettinger.david.taskchains.ui.views;
 
 import bettinger.david.taskchains.model.data.BaseData;
 import com.vaadin.flow.component.Component;
@@ -12,9 +12,9 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.shared.Registration;
 
 public abstract class BaseForm<T> extends FormLayout {
-    Button save = new Button("Save");
-    Button delete = new Button("Delete");
-    Button close = new Button("Cancel");
+    protected Button save = new Button("Save");
+    protected Button delete = new Button("Delete");
+    protected Button close = new Button("Cancel");
 
 
     public BaseForm(){
@@ -51,20 +51,20 @@ public abstract class BaseForm<T> extends FormLayout {
     }
 
     public static class SaveEvent extends FormEvent {
-        SaveEvent(BaseForm source, BaseData baseData) {
+        public SaveEvent(BaseForm source, BaseData baseData) {
             super(source, baseData);
         }
     }
 
     public static class DeleteEvent extends FormEvent {
-        DeleteEvent(BaseForm source, BaseData baseData) {
+        public DeleteEvent(BaseForm source, BaseData baseData) {
             super(source, baseData);
         }
 
     }
 
     public static class CloseEvent extends FormEvent {
-        CloseEvent(BaseForm source) {
+        public CloseEvent(BaseForm source) {
             super(source, null);
         }
     }

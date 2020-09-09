@@ -1,4 +1,4 @@
-package bettinger.david.taskchains.ui.views.list;
+package bettinger.david.taskchains.ui.views;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.accordion.Accordion;

@@ -1,27 +1,29 @@
-package bettinger.david.taskchains.ui.views.list;
+package bettinger.david.taskchains.ui.views.tasks;
 
-import bettinger.david.taskchains.model.data.TaskChainData;
+import bettinger.david.taskchains.model.data.TaskData;
+import bettinger.david.taskchains.ui.views.BaseForm;
 import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.converter.LocalDateToDateConverter;
 
-public class TaskChainsForm extends BaseForm<TaskChainData> {
-    TextField name = new TextField("Task-Chain name");
+public class TaskForm extends BaseForm<TaskData> {
+    TextField name = new TextField("Task name");
     TextArea description = new TextArea("Description");
     DatePicker deadline = new DatePicker("Deadline");
 
-    Binder<TaskChainData> binder = new Binder<>(TaskChainData.class);
 
-    public TaskChainsForm() {
+    Binder<TaskData> binder = new Binder<>(TaskData.class);
+
+    public TaskForm() {
         super();
         binder.bind(name, "name");
         binder.bind(description, "description");
 
         binder.forField(deadline)
                 .withConverter(new LocalDateToDateConverter())
-                .bind(TaskChainData::getDeadline, TaskChainData::setDeadline);
+                .bind(TaskData::getDeadline, TaskData::setDeadline);
 
         addListeners();
 
@@ -33,8 +35,12 @@ public class TaskChainsForm extends BaseForm<TaskChainData> {
         );
     }
 
-    public void setChainTask(TaskChainData taskChainData) {
-        binder.setBean(taskChainData);
+    public String getTaskName(){
+        return name.getValue();
+    }
+
+    public void setTask(TaskData taskData) {
+        binder.setBean(taskData);
     }
 
 

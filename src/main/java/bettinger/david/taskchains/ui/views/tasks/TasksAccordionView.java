@@ -1,10 +1,11 @@
-package bettinger.david.taskchains.ui.views.list;
+package bettinger.david.taskchains.ui.views.tasks;
 
 import bettinger.david.taskchains.model.data.TaskChainData;
 import bettinger.david.taskchains.model.data.TaskData;
 import bettinger.david.taskchains.service.TaskChainDataSessionService;
 import bettinger.david.taskchains.service.TaskChainService;
 import bettinger.david.taskchains.ui.MainLayout;
+import bettinger.david.taskchains.ui.views.AccordionExtended;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.accordion.AccordionPanel;
 import com.vaadin.flow.component.html.H2;
@@ -90,7 +91,6 @@ public class TasksAccordionView extends VerticalLayout {
 
         taskForm.setTask(taskData);
         addListeners(taskForm);
-        //todo add ability to add task between others
         AccordionPanel accordionPanel = accordion.addAt(name, taskForm, index);
 
         accordionPanel.addOpenedChangeListener(openedChangeEvent -> {

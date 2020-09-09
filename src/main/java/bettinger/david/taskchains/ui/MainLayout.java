@@ -1,6 +1,7 @@
 package bettinger.david.taskchains.ui;
 
-import bettinger.david.taskchains.ui.views.list.TaskChainsListView;
+import bettinger.david.taskchains.ui.views.taskchains.TaskChainsListView;
+import bettinger.david.taskchains.ui.views.usermanagement.UserListView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.CssImport;
@@ -45,11 +46,15 @@ public class MainLayout extends AppLayout {
     }
 
     private void createDrawer() {
-        RouterLink listLink = new RouterLink("Admin", TaskChainsListView.class);
-        listLink.setHighlightCondition(HighlightConditions.sameLocation());
+        RouterLink userManagementLink = new RouterLink("Manage Users", UserListView.class);
+        userManagementLink.setHighlightCondition(HighlightConditions.sameLocation());
+
+        RouterLink taskChainLink = new RouterLink("Create Task-Chains", TaskChainsListView.class);
+        taskChainLink.setHighlightCondition(HighlightConditions.sameLocation());
 
         addToDrawer(new VerticalLayout(
-                listLink
+                userManagementLink,
+                taskChainLink
         ));
     }
 

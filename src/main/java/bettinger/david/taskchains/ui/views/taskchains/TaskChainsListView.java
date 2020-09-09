@@ -1,9 +1,10 @@
-package bettinger.david.taskchains.ui.views.list;
+package bettinger.david.taskchains.ui.views.taskchains;
 
 import bettinger.david.taskchains.model.data.TaskChainData;
 import bettinger.david.taskchains.service.TaskChainDataSessionService;
 import bettinger.david.taskchains.service.TaskChainService;
 import bettinger.david.taskchains.ui.MainLayout;
+import bettinger.david.taskchains.ui.views.tasks.TasksAccordionView;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
