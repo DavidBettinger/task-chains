@@ -1,3 +1,5 @@
+## The development of this app is currently on hold, because I am switching to Angular for the frontend
+
 # Task-Chains Spring Boot Web App
 
 A Spring Boot web app to create and manage task-chains.
